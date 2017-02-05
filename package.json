@@ -1,0 +1,28 @@
+{
+  "name": "pikablog.rssmaker",
+  "version": "0.0.0",
+  "description": "Generate rss file for pikablog.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benpigchu/pikablog.rssmaker.git"
+  },
+  "keywords": [
+    "rss",
+    "generator",
+    "blog"
+  ],
+  "author": "benpigchu",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/benpigchu/pikablog.rssmaker/issues"
+  },
+  "homepage": "https://github.com/benpigchu/pikablog.rssmaker#readme",
+  "dependencies": {
+    "rss": "^1.2.2"
+  }
+}
