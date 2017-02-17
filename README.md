@@ -18,5 +18,7 @@ module.exports={
 	feedUrl,//feed url
 	siteUrl,//site url
 	articleUrl,//function to generate article url
+	fullText,//whether feed include fulltext
+	srcUrl,//function to generate url for img
 }
 ```

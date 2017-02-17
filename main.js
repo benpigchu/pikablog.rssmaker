@@ -13,14 +13,21 @@ let config=require(`./config.js`)
 console.log(util.inspect(pageOneData))
 console.log(util.inspect(config))
 
+const getContent=(article)=>{
+	let content=config.fullText?JSON.parse(fs.readFileSync(path.normalize(dataFolder+path.sep+"article"+path.sep+article.name+".json"),"utf-8")).content:article.preview
+	content=content.replace(/src="([^"]*)"/g,(str,src)=>`src="${config.srcUrl(src)}"`)
+	return content
+}
+
 let feed=new Rss({title:config.title,
 	description:config.description,
 	feed_url:config.feedUrl,
-	site_url:config.siteUrl})
+	site_url:config.siteUrl,
+	generator:"pikablog.rssmaker"})
 
 for(let article of pageOneData){
 	feed.item({title:article.title,
-		description:article.preview,
+		description:getContent(article),
 		url:config.articleUrl(article),
 		categories:article.tag,
 		date:article.time})
