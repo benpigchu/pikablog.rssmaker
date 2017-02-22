@@ -23,7 +23,8 @@ let feed=new Rss({title:config.title,
 	description:config.description,
 	feed_url:config.feedUrl,
 	site_url:config.siteUrl,
-	generator:"pikablog.rssmaker"})
+	generator:"pikablog.rssmaker",
+	pubDate:new Date()})
 
 for(let article of pageOneData){
 	feed.item({title:article.title,
