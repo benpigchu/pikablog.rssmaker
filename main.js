@@ -10,8 +10,6 @@ if(dataFolder===undefined){
 }
 let pageOneData=JSON.parse(fs.readFileSync(path.normalize(dataFolder+path.sep+"list"+path.sep+"1.json"),"utf-8"))
 let config=require(`./config.js`)
-console.log(util.inspect(pageOneData))
-console.log(util.inspect(config))
 
 const getContent=(article)=>{
 	let content=config.fullText?JSON.parse(fs.readFileSync(path.normalize(dataFolder+path.sep+"article"+path.sep+article.name+".json"),"utf-8")).content:article.preview
